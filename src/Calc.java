@@ -48,6 +48,10 @@ public class Calc {
             System.out.println("используются одновременно разные системы счисления");
             throw new Exception("используются одновременно разные системы счисления");
         }
+        if (number1 < 1  && number2 < 1 || number1 > 10 && number2 > 10) {
+            System.out.println("Входные данные должны быть в диапазоне от 1 до 10");
+            throw new Exception("Входные данные должны быть в диапазоне от 1 до 10");
+        }
         if (number1 < 0 && number2 < 0) {
             result = 0;
         } else {
