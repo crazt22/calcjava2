@@ -45,14 +45,15 @@ public class Calc {
         number1 = romanToNumber(stable00);
         number2 = romanToNumber(string03);
         if (number1 < 0 && number2 > 0 || number1 > 0 && number2 < 0) {
-            System.out.println("используются одновременно разные системы счисления");
-            throw new Exception("используются одновременно разные системы счисления");
+            System.out.println("используются одновременно разные системы счисления.");
+
+            throw new Exception("используются одновременно разные системы счисления.");
         }
-        if (number1 < 1  && number2 < 1 || number1 > 10 && number2 > 10) {
+        if (Integer.parseInt(stable00 )<1  || Integer.parseInt(string03) < 1 || Integer.parseInt(stable00) > 10 || Integer.parseInt(string03) > 10) {
             System.out.println("Входные данные должны быть в диапазоне от 1 до 10");
             throw new Exception("Входные данные должны быть в диапазоне от 1 до 10");
         }
-        if (number1 < 0 && number2 < 0) {
+        if (number1 < 0 && number2 < 0  ) {
             result = 0;
         } else {
             result = calculated(number1, number2, operation);
